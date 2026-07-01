@@ -34,6 +34,7 @@ body
     align-items: center;
     justify-content: center;
     margin-right: 50px;
+    text-align: center;
 }
 
 #siteicon img
@@ -45,17 +46,26 @@ body
     
 }
 
-#siteicon p
+#siteicon a
 {
+    width: 230px;
+    color: black;
+    text-decoration: none;
     float: right;
     margin-right: 30px;
     margin-left: 10px;
     font-family: icon ,sans-serif , Arial, Helvetica;
     font-size: 45px;
     text-shadow: 0px 1px 25px rgb(251, 255, 0);
+    background-color: red;
+    border-radius: 20%;
 }
 
 /* ################## Header_searchbox ###################### */
+#searchbox
+{
+    display: none;
+}
 
 #searchbox form input[type="text"]
 {
@@ -100,20 +110,36 @@ body
     float: left;
 }
 
-#sinlog button img
+#sinlog a:hover
 {
-    width: 50px;
-    height: 50px;
+    text-shadow: 0px 0px 20px red;
+    color: blue;
+}
+
+#searchbutton
+{
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 2px solid black;
 }
 
 #sinlog button
 {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 15px;
     border: none;
     float: left;
-    background-color: white;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+#searchbutton:hover
+{
+    background-color: rgb(0, 110, 255);
+    box-shadow: 0px 0px 20px 0px red;
 }
