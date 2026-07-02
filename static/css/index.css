@@ -172,13 +172,18 @@ body
 
 #ulmenu > li
 {
-    margin-left: 50px;
+    margin-left: 30px;
     position: relative;
 }
 
-#ulmenu li a:hover
+#ulmenu > li:hover > a
 {
     background-color: red;
+}
+
+#ulmenu > li:hover > .dropdown
+{
+    display: grid;
 }
 
 #ulmenu > li > a
@@ -198,10 +203,27 @@ body
 .dropdown 
 {
     direction: rtl;
-    width: 500px;
-    height: 300px;
+    width: 600px;
+    height: 400px;
     position: absolute;
     top: 100%;
     right: 0;
+    background-color: rgb(29, 29, 29);
+    display: none;
+    grid-template-columns: repeat(10 , auto);
+    grid-template-rows: repeat(10 , auto);
+    grid-auto-flow: column;
+}
+
+.dropdown a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.dropdown li:hover
+{
     background-color: red;
 }

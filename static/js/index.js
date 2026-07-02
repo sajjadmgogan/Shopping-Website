@@ -10,3 +10,4 @@ search_button.addEventListener('click' , function(){
 search_input.addEventListener('blur' , function(){
     search_box.style.display = 'none';
 });
+
