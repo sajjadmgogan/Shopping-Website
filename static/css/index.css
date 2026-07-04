@@ -2,6 +2,7 @@ body
 {
     margin: 0;
     background-color: rgb(231, 231, 231);
+    padding-top: 100px;
 }
 
 /* ################## fonts ###################### */
@@ -23,6 +24,11 @@ body
     align-items: center;
     row-gap: 50px;
     background-color: white;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10000;
 }
 
 /* ################## Header_siteicon ###################### */
@@ -56,8 +62,9 @@ body
     margin-left: 10px;
     font-family: icon ,sans-serif , Arial, Helvetica;
     font-size: 45px;
-    text-shadow: 0px 1px 25px rgb(251, 255, 0);
-    background-color: red;
+    text-shadow: 0px 1px 30px rgb(86, 255, 1);
+    box-shadow: 0px 1px 10px 1px rgb(255, 1, 1);
+    background-color: rgb(0, 179, 255);
     border-radius: 20%;
 }
 
@@ -203,16 +210,18 @@ body
 .dropdown 
 {
     direction: rtl;
-    width: 600px;
+    width: 700px;
     height: 400px;
     position: absolute;
     top: 100%;
-    right: 0;
+    right: 50%;
+    transform: translateX(50%);
     background-color: rgb(29, 29, 29);
     display: none;
     grid-template-columns: repeat(10 , auto);
     grid-template-rows: repeat(10 , auto);
     grid-auto-flow: column;
+    z-index: 9999;
 }
 
 .dropdown a
@@ -226,4 +235,197 @@ body
 .dropdown li:hover
 {
     background-color: red;
+}
+
+/* ################## container1 ###################### */
+
+#slider
+{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    margin:30px 0;
+}
+
+#container1
+{
+    width: 100%;
+    height: 100%px;
+    background-color: rgb(207, 207, 207);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#slider #btn_right
+{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 35%;
+    right: 10px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    cursor: pointer;
+}
+
+#slider #btn_right:hover
+{
+    background-color: rgb(0, 179, 255);
+}
+
+#slider #btn_right:active
+{
+    background-color: red;
+}
+
+#slider #btn_right img
+{
+    width: 50px;
+    height: 50px;
+}
+
+#slider #btn_left
+{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 35%;
+    left: 10px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    cursor: pointer;
+}
+
+#slider #btn_left:hover
+{
+    background-color: rgb(0, 179, 255);
+}
+
+#slider #btn_left:active
+{
+    background-color: red;
+}
+
+#slider #btn_left img
+{
+    width: 50px;
+    height: 50px;
+}
+
+.slider_title
+{
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background-color: rgb(231, 231, 231);
+    padding: 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 100;
+}
+
+.product-container1
+{
+    width: 120px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+
+}
+
+.product-container1:hover
+{
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    background-color: rgb(0, 179, 255);
+    border-radius: 10%;
+}
+
+.product-container1 a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+.product-container1 img
+{
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    border-radius: 50%;
+}
+.product-container1 h3
+{
+    margin-top: 0;
+}
+
+/* ################## container2 ###################### */
+
+#container2
+{
+    width: 80%;
+    max-width: 1300px;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.product-container2
+{
+    width: 220px;
+    height: 380px;
+    background-color: rgb(0, 179, 255);
+    box-shadow: 1px 1px 10px 5px blue;
+    border: 1px solid black;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 5%;
+    margin: 30px 30px;
+}
+
+.product-container2 a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    direction: rtl;
+}
+
+.product-container2:hover
+{
+    transform: scale(1.08);
+    transition: transform 0.3s;
+    box-shadow: 1px 1px 10px 5px rgb(255, 0, 0);
+}
+
+.product-container2 h2
+{
+    font-size: 22px;
+    border-bottom: 2px dashed black;
+    padding-bottom: 5px;
+}
+
+.product-container2 img
+{
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+ 
 }
