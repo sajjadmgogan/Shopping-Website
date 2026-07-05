@@ -2,8 +2,13 @@ var search_button = document.getElementById("searchbutton");
 var search_box = document.getElementById("searchbox");
 var search_input = document.getElementById("searchinput");
 var product_container1 = document.getElementById("container1");
-var btn_right_pro_con1 = document.getElementById("btn_right")
-var btn_left_pro_con2 = document.getElementById("btn_left")
+var btn_right_pro_con1 = document.getElementById("btn_right");
+var btn_left_pro_con2 = document.getElementById("btn_left");
+var banner_slider = document.getElementById("banner_container");
+var banners = document.querySelectorAll(".banner");
+var widths = 1600;
+var current = 0;
+
 
 search_button.addEventListener('click' , function(){
     search_box.style.display = 'block';
@@ -27,3 +32,18 @@ btn_left_pro_con2.addEventListener('click' , function(){
         behavior: "smooth"
     });
 });
+
+setInterval(function(){
+    current++;
+        banner_slider.scrollTo({
+            left: current * widths,
+            behavior: "smooth"
+    });
+    if(current == (banners.length))
+    {
+            banner_slider.scrollTo({
+                left: 0,
+            });
+        current = 0;
+    }
+},3000);
