@@ -621,3 +621,72 @@ body
     width: 100px;
     background-color: red;
 }
+
+/* ################## Footer ###################### */
+
+.footer
+{
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    column-gap: 50px;
+}
+
+#Symbol
+{
+    border-right: 1px dashed black;
+}
+
+#Social_networks
+{
+    border-right: 1px dashed black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#Social_networks a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 27px;
+    font-weight: bold;
+    width: 100px;
+    height: 80px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20%;
+    box-shadow: 0 0 20px rgb(40, 40, 40);
+}
+
+#Social_networks a:hover
+{
+    transform: scale(1.05);
+}
+
+#Social_networks a img
+{
+    width: 100%;
+    height: 100%;
+}
+
+#Support
+{
+    direction: rtl;
+    text-align: center;
+    border-right: 1px dashed black;
+    font-size: 25px;
+}
+
+#about
+{
+    direction: rtl;
+    text-align: center;
+    font-size: 20px;
+}
