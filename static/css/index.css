@@ -964,12 +964,16 @@ body
         box-shadow: 0 0 20px red;
     }
 
+    #menufooter:active #menu_strip
+    {
+        display: flex;
+    }
+
     #menufooter img
     {
-        width: 100%;
-        height: 100%;
+        width: 70px;
+        height: 70px;
         border-radius: 50%;
-        border: 2px solid black;
     }
 
     /* --------------- seachbox ---------------- */
@@ -993,13 +997,13 @@ body
         font-size: 10px;
 
     }
-
+    /* --------------- menu strip ---------------- */
     #menu_strip
     {
         width: 200px;
         height: 100%;
-        background-color: red;
-        display: flex;
+        background-color: rgb(220, 220, 220);
+        display: none;
         flex-direction: column;
         position: fixed;
         top: 0;
@@ -1015,49 +1019,88 @@ body
         align-items: center;
         justify-content: center;
         font-size: 30px;
-        background-color: blue;
     }
 
     #menu_strip_list
     {
         width: 100%;
         height: 100%;
-        background-color: yellow;
+        border-top: 2px solid black;
     }
 
     #menu_strip_list ul
     {
         list-style: none;
+        padding: 0px;
+        margin: 0;
+        direction: rtl;
     }
 
     #ul_menu_strip_list
     {
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: repeat(10,1fr);
+        display: flex;
+        flex-direction: column;
     }
+
+    #ul_menu_strip_list > li > a
+    {
+        display: block;
+        padding: 10px;
+    } 
+
+    #ul_menu_strip_list > li > a:active 
+    {
+        background-color: red;
+    }
+
+    #ul_menu_strip_list > li:hover > #dropdown_menu_strip_list
+    {
+        display: grid;
+    } 
 
     #ul_menu_strip_list li
     {
         position: relative;
+        margin: 0;
     }
 
     #ul_menu_strip_list a
     {
         text-decoration: none;
         color: black;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     #dropdown_menu_strip_list
     {
+        display: none;
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows: 40px;
         direction: rtl;
-        width: 200px;
-        height: 500px;
+        width: 500px;
+        height: 300px;
         position: absolute;
         top: 0;
         left: 100%;
         z-index: 14999;
-        background-color: green;
+        overflow-y: auto;
+        background-color: rgb(235, 235, 235);
+        border: 1px solid rgb(202, 202, 202);
     }
+
+    #dropdown_menu_strip_list > li > a
+    {
+        display: block;
+        padding: 10px;
+    }
+
+    #dropdown_menu_strip_list > li > a:active
+    {
+        background-color: red;
+    }
+
+    #dropdown_menu_strip_list a
+    {
+        font-size: 15px; 
+    };
 }
