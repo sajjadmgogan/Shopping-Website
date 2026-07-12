@@ -42,6 +42,14 @@ setInterval(function(){
             banners[i].style.marginRight = (widths - 700)/2 + "px";
         }
     }
+    else if(window.innerWidth>=480 && window.innerWidth<=767)
+    {
+        for(var i=0 ; i < (banners.length) ; i++)
+        {
+            banners[i].style.marginLeft = (widths - 400)/2 + "px";
+            banners[i].style.marginRight = (widths - 400)/2 + "px";
+        }
+    }
 },100)
 
 menu_strip_btn.addEventListener('click' , function(){
