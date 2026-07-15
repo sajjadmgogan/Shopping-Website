@@ -28,7 +28,6 @@ body
     height: 45%;
     display: flex;
     flex-direction: row-reverse;
-    background-color: red;
 }
 
 #product_img
@@ -164,79 +163,191 @@ body
 
 /* ---------------------  media query  --------------------- */
 
+/* ---------------------  media query-labtap  --------------------- */
+
 @media (max-width:1440px) and (min-width:1025px)
 {
     #product
     {
         width: 900px;
-        height: 1000px;
-         background-color: red;
     }
 
     /* ----------------  image title  ------------------------ */
 
-    #product_img
+    #image_title
     {
-        width: 430px;
-        height: 430px;
+        width: 90%;
+        height: 45%;
+        display: flex;
+        flex-direction: row-reverse;
     }
 
-    #product_img_slider
+    #product_img
     {
-        width: 430px;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        overflow-x: auto;
-        background-color: blue;
+        width: 405px;
+        height: 405px;
     }
 
     #product_img_slider > img
     {
-        width: 410px;
-        height: 410px;
+        width: 385px;
+        height: 385px;
     }
 
     #product_information
     {
-        width: 400px;
-        height: 450px;
-        direction: rtl;
-        position: relative;
-        border-right: 1px solid black;
-         background-color: rgb(0, 255, 72);
+        width: 405px;
+        height: 540px;
     }
+
     #product_information > h1
     {
-        position: absolute;
-        top: 10px;
-        right: 20px;
+        top: 0px;
+        font-size: 25px;
     }
 
     #product_information > p
     {
-        position: absolute;
-        top: 140px;
-        right: 20px;
+        top: 100px;
+        font-size: 15px;
     }
 
     #product_information > a
     {
-        position: absolute;
-        bottom: 100px;
-        right: 45%;
-        text-decoration: none;
-        color: white;
-        background-color: green;
-        padding: 15px 20px;
-        border-radius: 10%;
-        font-size: 20px;
-        font-weight: bold;
-        box-shadow: 0 0 20px green;
+        bottom: 50px;
+        right: 30%;
+        padding: 10px 20px;
     }
 
-    #product_information > a:active
+}
+
+/* ---------------------  media query-tablet  --------------------- */
+
+@media (max-width:1024px) and (min-width:768px)
+{
+    #product
     {
-        color: red;
+        width: 700px;
+        height: 1900px;
+        justify-content: flex-start;
+        border-radius: 2%;
+    }
+
+    /* ----------------  image title  ------------------------ */
+
+    #image_title
+    {
+        height: 1080px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #product_img
+    {
+        width: 500px;
+        height: 500px;
+    }
+
+    #product_img_slider > img
+    {
+        width: 480px;
+        height: 480px;
+    }
+
+    #product_information
+    {
+        width: 650px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-right: none;
+    }
+
+    #product_information > h1
+    {
+        font-size: 25px;
+    }
+
+    #product_information > p
+    {
+        top: 120px;
+    }
+
+    /* ----------------  description  ------------------------ */
+
+    #description
+    {
+        width: 650px;
+        height: 40%;
+    }
+}
+
+/* ---------------------  media query-mpbile phone  --------------------- */
+
+@media (max-width:767px) and (min-width:480px)
+{
+    #product
+    {
+        width: 480px;
+        height: 1800px;
+        justify-content: flex-start;
+        border-radius: 2%;
+    }
+
+    /* ----------------  image title  ------------------------ */
+
+    #image_title
+    {
+        height: 1080px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #product_img
+    {
+        width: 432px;
+        height: 432px;
+    }
+
+    #product_img_slider > img
+    {
+        width: 412px;
+        height: 412px;
+    }
+
+    #product_information
+    {
+        width: 420px;
+        height: 600px;
+        border-right: none;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+    }
+    #product_information > h1
+    {
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        font-size: 20px;
+    }
+
+    #product_information > p
+    {
+        top: 100px;
+    }
+
+    #product_information > a
+    {
+        bottom: 50px;
+        right: 35%;
+    }
+
+    /* ----------------  description  ------------------------ */
+
+    #description
+    {
+        width: 432px;
+        height: 39%;
     }
 }
